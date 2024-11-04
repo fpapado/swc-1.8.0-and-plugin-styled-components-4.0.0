@@ -8,7 +8,7 @@ pnpm i
 pnpm exec swc index.js --out-file out.js
 ```
 
-Expect to see a warning similar to this:
+Expect to see an error similar to this:
 
 ```
 thread '<unnamed>' panicked at /home/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/swc_plugin_proxy-3.0.0/src/memory_interop/read_returned_result_from_host.rs:110:10:
@@ -63,3 +63,5 @@ Error: Failed to compile 1 file with swc.
     at files (/Users/fotis/swc-1.8.0-and-plugin-styled-components-4.0.0/node_modules/.pnpm/@swc+cli@0.5.0_@swc+core@1.8.0/node_modules/@swc/cli/lib/swc/file.js:205:19)
     at async _default (/Users/fotis/swc-1.8.0-and-plugin-styled-components-4.0.0/node_modules/.pnpm/@swc+cli@0.5.0_@swc+core@1.8.0/node_modules/@swc/cli/lib/swc/file.js:224:9)
 ```
+
+This seems contrary to <https://plugins.swc.rs/versions/range/19>, which shows `@swc/core@1.8.0` and `@swc/plugin-styled-components@4.0.0` as compatible.
